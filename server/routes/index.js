@@ -1,9 +1,8 @@
-var express = require('express');
-var router = express.Router();
+var router = require('express').Router()
+    router.get('/', (req, res, next) => {
+        res.json({succes : false, error : 0, msg : 'home api end point', data : null})
+    })
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+
 
 module.exports = router;
